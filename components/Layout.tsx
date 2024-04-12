@@ -114,7 +114,7 @@ function Layout({ children }: PropsWithChildren) {
               <HStack spacing={8}>
                 <Navigation link="/">Home</Navigation>
                 <Navigation link="/works">Works</Navigation>
-                <Navigation link="https://blog.shreyasprakash.com/" isExternal>Blog</Navigation>>
+                <Navigation link="https://blog.shreyasprakash.com/" isExternal>Blog</Navigation>
                 <Navigation link="/books">Books</Navigation>
                 
               </HStack>

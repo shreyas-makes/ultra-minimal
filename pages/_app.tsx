@@ -54,17 +54,13 @@ export default function App({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout || getDefaultLayout;
 
   React.useEffect(() => {
-    posthog.init("phc_jFlJqpi333LZJJRxwjiFTkKI2Ufv3Pgf0hnbrPuZdLL", {
-      api_host: "https://app.posthog.com",
-    });
-
     const handleRouteChange = () => posthog.capture("$pageview");
     router.events.on("routeChangeComplete", handleRouteChange);
 
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, []);
+  }, [router.events]); 
 
   return (
     <ChakraProvider theme={theme}>
