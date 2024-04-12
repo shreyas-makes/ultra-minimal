@@ -28,7 +28,7 @@ const Writing: NextPageWithLayout<WritingProps> = ({ posts }) => {
               <Link
                 href={post.url}
                 target={post.external ? "_blank" : "_self"}
-                color="blue.600"
+                color="blue.500"
               >
                 <Text>{post.title}</Text>
               </Link>

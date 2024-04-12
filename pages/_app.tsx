@@ -37,7 +37,7 @@ const theme = extendTheme(
         fontSize: "l", // Reduced from original size
       },
       a: {
-        color: "blue.900",
+        color: "blue.500",
       },
     },
   })
