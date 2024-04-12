@@ -37,7 +37,7 @@ const theme = extendTheme(
         fontSize: "l", // Reduced from original size
       },
       a: {
-        color: "blue.600",
+        color: "blue.900",
       },
     },
   })
@@ -66,7 +66,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme}>
       <DefaultSeo
         title="Shreyas Prakash"
-        description="I'm a constant learner and aspiring technical generalist. I'm also a founding enginer at thirdweb and on gap year from the University of Pennsylvania."
+        description="I'm Shreyas, a designer and aspiring technical generalist. I'm also a product manager at Noora Health."
         openGraph={{
           title: "Shreyas",
           description:
