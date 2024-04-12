@@ -34,10 +34,10 @@ const theme = extendTheme(
       },
       p: {
         my: 3,
-        fontSize: "md", // Reduced from original size
+        fontSize: "l", // Reduced from original size
       },
       a: {
-        color: "blue.500",
+        color: "blue.600",
       },
     },
   })
