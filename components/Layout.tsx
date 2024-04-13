@@ -82,7 +82,7 @@ function Layout({ children }: PropsWithChildren) {
             <Navigation link="https://www.linkedin.com/in/shreyasprakash/" isExternal>
               Linkedin
             </Navigation>
-            <Navigation link="https://www.blog.shreyasprakash.com" isExternal>
+            <Navigation link="https://blog.shreyasprakash.com" isExternal>
               Blog
             </Navigation>
           </VStack>
@@ -156,7 +156,7 @@ function Layout({ children }: PropsWithChildren) {
                         Linkedin
                       </Navigation>
                       <Navigation
-                        link="https://www.blog.shreyasprakash.com"
+                        link="https://blog.shreyasprakash.com"
                         isExternal
                       >
                         Blog
