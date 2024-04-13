@@ -82,6 +82,9 @@ function Layout({ children }: PropsWithChildren) {
             <Navigation link="https://www.linkedin.com/in/shreyasprakash/" isExternal>
               Linkedin
             </Navigation>
+            <Navigation link="https://www.blog.shreyasprakash.com" isExternal>
+              Blog
+            </Navigation>
           </VStack>
         </VStack>
       </Flex>
@@ -114,7 +117,7 @@ function Layout({ children }: PropsWithChildren) {
               <HStack spacing={8}>
                 <Navigation link="/">Home</Navigation>
                 <Navigation link="/works">Works</Navigation>
-                <Navigation link="https://blog.shreyasprakash.com/" isExternal>Blog</Navigation>
+                <Navigation link="/now">Writing</Navigation>
                 <Navigation link="/books">Books</Navigation>
                 
               </HStack>
@@ -130,7 +133,8 @@ function Layout({ children }: PropsWithChildren) {
                   <MenuGroup title="NAVIGATION">
                     <VStack align="flex-start" px={4} spacing={3} mb={4}>
                       <Navigation link="/">Home</Navigation>
-                      <Navigation link="https://blog.shreyasprakash.com/" isExternal>Writing</Navigation>
+                      <Navigation link="/works">Works</Navigation>
+                      <Navigation link="/now">Writing</Navigation>
                       <Navigation link="/books">Books</Navigation>
                     </VStack>
                   </MenuGroup>
@@ -150,6 +154,12 @@ function Layout({ children }: PropsWithChildren) {
                         isExternal
                       >
                         Linkedin
+                      </Navigation>
+                      <Navigation
+                        link="https://www.blog.shreyasprakash.com"
+                        isExternal
+                      >
+                        Blog
                       </Navigation>
                       
                     </VStack>
