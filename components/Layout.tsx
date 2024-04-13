@@ -65,7 +65,7 @@ function Layout({ children }: PropsWithChildren) {
             </Text>
             <Navigation link="/">Home</Navigation>
             <Navigation link="/works">Works</Navigation>
-            <Navigation link="https://blog.shreyasprakash.com/" isExternal>Blog</Navigation>
+            <Navigation link="/now">Now</Navigation>
             <Navigation link="/books">Books</Navigation>
             
           </VStack>
@@ -116,8 +116,8 @@ function Layout({ children }: PropsWithChildren) {
             <Flex justify="space-between" width="100%">
               <HStack spacing={8}>
                 <Navigation link="/">Home</Navigation>
+                <Navigation link="/now">Now</Navigation>
                 <Navigation link="/works">Works</Navigation>
-                <Navigation link="/now">Writing</Navigation>
                 <Navigation link="/books">Books</Navigation>
                 
               </HStack>
@@ -133,8 +133,8 @@ function Layout({ children }: PropsWithChildren) {
                   <MenuGroup title="NAVIGATION">
                     <VStack align="flex-start" px={4} spacing={3} mb={4}>
                       <Navigation link="/">Home</Navigation>
+                      <Navigation link="/now">Now</Navigation>
                       <Navigation link="/works">Works</Navigation>
-                      <Navigation link="/now">Writing</Navigation>
                       <Navigation link="/books">Books</Navigation>
                     </VStack>
                   </MenuGroup>
