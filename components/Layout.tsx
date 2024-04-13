@@ -145,6 +145,13 @@ function Layout({ children }: PropsWithChildren) {
                       <Navigation link="github.com/shreyas-makes/" isExternal>
                         GitHub
                       </Navigation>
+                      <Navigation
+                        link="https://www.linkedin.com/in/shreyasprakash/"
+                        isExternal
+                      >
+                        Linkedin
+                      </Navigation>
+                      
                     </VStack>
                   </MenuGroup>
                 </MenuList>
