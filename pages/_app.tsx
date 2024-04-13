@@ -73,7 +73,7 @@ export default function App({ Component, pageProps }: AppProps) {
             "I'm Shreyas, a designer and aspiring technical generalist. I'm also a product manager at Noora Health.",
           images: [
             {
-              url: "https://shreyasprakash.com/og-image-dark.jpg",
+              url: "https://shreyasprakash.com/public/og-image-dark.jpg",
               type: "image/jpeg",
             },
           ],
