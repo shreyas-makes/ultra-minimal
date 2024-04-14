@@ -70,9 +70,13 @@ function Layout({ children }: PropsWithChildren) {
             
           </VStack>
           <VStack align="flex-start">
+            
             <Text fontWeight="bold" fontSize="smaller">
               FIND ME ON
             </Text>
+            <Navigation link="https://blog.shreyasprakash.com" isExternal>
+              Blog
+            </Navigation>
             <Navigation link="https://twitter.com/shreyasmakes" isExternal>
               Twitter
             </Navigation>
@@ -82,9 +86,7 @@ function Layout({ children }: PropsWithChildren) {
             <Navigation link="https://www.linkedin.com/in/shreyasprakash/" isExternal>
               Linkedin
             </Navigation>
-            <Navigation link="https://blog.shreyasprakash.com" isExternal>
-              Blog
-            </Navigation>
+            
           </VStack>
         </VStack>
       </Flex>
@@ -140,6 +142,12 @@ function Layout({ children }: PropsWithChildren) {
                   </MenuGroup>
                   <MenuGroup title="FIND ME ON">
                     <VStack align="flex-start" px={4} spacing={3} mb={2}>
+                    <Navigation
+                        link="https://blog.shreyasprakash.com"
+                        isExternal
+                      >
+                        Blog
+                      </Navigation>
                       <Navigation
                         link="https://twitter.com/shreyasmakes"
                         isExternal
@@ -155,12 +163,7 @@ function Layout({ children }: PropsWithChildren) {
                       >
                         Linkedin
                       </Navigation>
-                      <Navigation
-                        link="https://blog.shreyasprakash.com"
-                        isExternal
-                      >
-                        Blog
-                      </Navigation>
+                     
                       
                     </VStack>
                   </MenuGroup>

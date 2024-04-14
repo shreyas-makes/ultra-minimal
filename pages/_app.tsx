@@ -7,12 +7,14 @@ import { DefaultSeo } from "next-seo";
 import posthog from "posthog-js";
 import React from "react";
 import { useRouter } from "next/router";
+import '@fontsource-variable/archivo';
+
 
 const theme = extendTheme(
   {
     fonts: {
-      heading: "Verdana, sans-serif",
-      body: "Verdana, sans-serif",
+      heading: "'Archivo Variable', sans-serif",
+      body: "'Archivo Variable', sans-serif",
     },
   },
   withProse({
