@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, ReactElement } from "react";
 import { FiMenu } from "react-icons/fi";
 
 function Navigation({
@@ -28,23 +28,28 @@ function Navigation({
   isExternal?: boolean;
 }) {
   const router = useRouter();
-  const isActive =
-    link === "/" ? router.asPath === link : router.asPath.includes(link);
+  const handleClick = () => {
+    if (isExternal) {
+      window.open(link, '_blank');
+    } else {
+      router.push(link);
+    }
+  };
 
   return (
-    <Link href={link} target={isExternal ? "_blank" : "_self"}>
-      <Text
-        fontSize="sm"
-        color={isActive ? "black" : "gray.500"}
-        _hover={{ color: "black" }}
-      >
-        {children}
-      </Text>
-    </Link>
+    <Text
+      fontSize="sm"
+      color={router.asPath === link || router.asPath.includes(link) ? "black" : "gray.500"}
+      _hover={{ color: "black" }}
+      onClick={handleClick}
+      cursor="pointer"
+    >
+      {children}
+    </Text>
   );
 }
 
-function Layout({ children }: PropsWithChildren) {
+function Layout({ children }: PropsWithChildren<{}>) {
   return (
     <Container
       position="relative"
@@ -60,33 +65,18 @@ function Layout({ children }: PropsWithChildren) {
       >
         <VStack position="fixed" align="flex-start" spacing={10}>
           <VStack align="flex-start">
-            <Text fontWeight="bold" fontSize="smaller">
-              NAVIGATION
-            </Text>
+            <Text fontWeight="bold" fontSize="smaller">NAVIGATION</Text>
             <Navigation link="/">Home</Navigation>
             <Navigation link="/works">Works</Navigation>
             <Navigation link="/now">Now</Navigation>
             <Navigation link="/books">Books</Navigation>
-            
           </VStack>
           <VStack align="flex-start">
-            
-            <Text fontWeight="bold" fontSize="smaller">
-              FIND ME ON
-            </Text>
-            <Navigation link="https://blog.shreyasprakash.com" isExternal>
-              Blog
-            </Navigation>
-            <Navigation link="https://twitter.com/shreyasmakes" isExternal>
-              Twitter
-            </Navigation>
-            <Navigation link="https://github.com/shreyas-makes" isExternal>
-              GitHub
-            </Navigation>
-            <Navigation link="https://www.linkedin.com/in/shreyasprakash/" isExternal>
-              Linkedin
-            </Navigation>
-            
+            <Text fontWeight="bold" fontSize="smaller">FIND ME ON</Text>
+            <Navigation link="https://blog.shreyasprakash.com" isExternal>Blog</Navigation>
+            <Navigation link="https://twitter.com/shreyasmakes" isExternal>Twitter</Navigation>
+            <Navigation link="https://github.com/shreyas-makes" isExternal>GitHub</Navigation>
+            <Navigation link="https://www.linkedin.com/in/shreyasprakash/" isExternal>LinkedIn</Navigation>
           </VStack>
         </VStack>
       </Flex>
@@ -121,51 +111,21 @@ function Layout({ children }: PropsWithChildren) {
                 <Navigation link="/now">Now</Navigation>
                 <Navigation link="/works">Works</Navigation>
                 <Navigation link="/books">Books</Navigation>
-                
               </HStack>
               <Menu>
-                <MenuButton
-                  as={IconButton}
-                  aria-label="Options"
-                  icon={<Icon as={FiMenu} boxSize={4} />}
-                  variant="outline"
-                  size="sm"
-                />
+                <MenuButton as={IconButton} aria-label="Options" icon={<Icon as={FiMenu} boxSize={4} />} variant="outline" size="sm" />
                 <MenuList>
                   <MenuGroup title="NAVIGATION">
-                    <VStack align="flex-start" px={4} spacing={3} mb={4}>
-                      <Navigation link="/">Home</Navigation>
-                      <Navigation link="/now">Now</Navigation>
-                      <Navigation link="/works">Works</Navigation>
-                      <Navigation link="/books">Books</Navigation>
-                    </VStack>
+                    <MenuItem onClick={() => router.push('/')}>Home</MenuItem>
+                    <MenuItem onClick={() => router.push('/now')}>Now</MenuItem>
+                    <MenuItem onClick={() => router.push('/works')}>Works</MenuItem>
+                    <MenuItem onClick={() => router.push('/books')}>Books</MenuItem>
                   </MenuGroup>
                   <MenuGroup title="FIND ME ON">
-                    <VStack align="flex-start" px={4} spacing={3} mb={2}>
-                    <Navigation
-                        link="https://blog.shreyasprakash.com"
-                        isExternal
-                      >
-                        Blog
-                      </Navigation>
-                      <Navigation
-                        link="https://twitter.com/shreyasmakes"
-                        isExternal
-                      >
-                        Twitter
-                      </Navigation>
-                      <Navigation link="github.com/shreyas-makes/" isExternal>
-                        GitHub
-                      </Navigation>
-                      <Navigation
-                        link="https://www.linkedin.com/in/shreyasprakash/"
-                        isExternal
-                      >
-                        Linkedin
-                      </Navigation>
-                     
-                      
-                    </VStack>
+                    <MenuItem as="a" href="https://blog.shreyasprakash.com" target="_blank">Blog</MenuItem>
+                    <MenuItem as="a" href="https://twitter.com/shreyasmakes" target="_blank">Twitter</MenuItem>
+                    <MenuItem as="a" href="https://github.com/shreyas-makes" target="_blank">GitHub</MenuItem>
+                    <MenuItem as="a" href="https://www.linkedin.com/in/shreyasprakash/" target="_blank">LinkedIn</MenuItem>
                   </MenuGroup>
                 </MenuList>
               </Menu>

@@ -56,13 +56,16 @@ export default function App({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout || getDefaultLayout;
 
   React.useEffect(() => {
-    const handleRouteChange = () => posthog.capture("$pageview");
+    const handleRouteChange = () => {
+      console.log('Route change completed');
+      posthog.capture("$pageview");
+    };
     router.events.on("routeChangeComplete", handleRouteChange);
-
+  
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, [router.events]); 
+  }, [router.events]);
 
   return (
     <ChakraProvider theme={theme}>
