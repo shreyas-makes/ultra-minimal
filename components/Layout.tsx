@@ -85,8 +85,7 @@ function Layout({ children }: PropsWithChildren) {
             </Navigation>
             <Navigation link="https://www.linkedin.com/in/shreyasprakash/" isExternal>
               Linkedin
-            </Navigation>
-            
+            </Navigation>  
           </VStack>
         </VStack>
       </Flex>
@@ -163,7 +162,7 @@ function Layout({ children }: PropsWithChildren) {
                       >
                         Linkedin
                       </Navigation>
-                     
+
                       
                     </VStack>
                   </MenuGroup>
