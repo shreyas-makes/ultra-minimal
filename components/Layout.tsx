@@ -47,6 +47,7 @@ function Navigation({
 function Layout({ children }: PropsWithChildren) {
   return (
     <Container
+      maxW="80%"
       position="relative"
       mt={{ base: 16, md: 20 }}
       pb={{ base: 8, md: "10em" }}
@@ -67,10 +68,8 @@ function Layout({ children }: PropsWithChildren) {
             <Navigation link="/works">Works</Navigation>
             <Navigation link="/now">Now</Navigation>
             <Navigation link="/books">Books</Navigation>
-            
           </VStack>
           <VStack align="flex-start">
-            
             <Text fontWeight="bold" fontSize="smaller">
               FIND ME ON
             </Text>
@@ -83,9 +82,12 @@ function Layout({ children }: PropsWithChildren) {
             <Navigation link="https://github.com/shreyas-makes" isExternal>
               GitHub
             </Navigation>
-            <Navigation link="https://www.linkedin.com/in/shreyasprakash/" isExternal>
+            <Navigation
+              link="https://www.linkedin.com/in/shreyasprakash/"
+              isExternal
+            >
               Linkedin
-            </Navigation>  
+            </Navigation>
           </VStack>
         </VStack>
       </Flex>
@@ -120,7 +122,6 @@ function Layout({ children }: PropsWithChildren) {
                 <Navigation link="/now">Now</Navigation>
                 <Navigation link="/works">Works</Navigation>
                 <Navigation link="/books">Books</Navigation>
-                
               </HStack>
               <Menu>
                 <MenuButton
@@ -141,7 +142,7 @@ function Layout({ children }: PropsWithChildren) {
                   </MenuGroup>
                   <MenuGroup title="FIND ME ON">
                     <VStack align="flex-start" px={4} spacing={3} mb={2}>
-                    <Navigation
+                      <Navigation
                         link="https://blog.shreyasprakash.com"
                         isExternal
                       >
@@ -162,8 +163,6 @@ function Layout({ children }: PropsWithChildren) {
                       >
                         Linkedin
                       </Navigation>
-
-                      
                     </VStack>
                   </MenuGroup>
                 </MenuList>
@@ -178,4 +177,3 @@ function Layout({ children }: PropsWithChildren) {
 }
 
 export default Layout;
-  
