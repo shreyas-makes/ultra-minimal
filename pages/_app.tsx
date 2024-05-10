@@ -7,24 +7,24 @@ import { DefaultSeo } from "next-seo";
 import posthog from "posthog-js";
 import React from "react";
 import { useRouter } from "next/router";
-import '@fontsource-variable/archivo';
-
+import "charter-webfont/charter.css";
+import "@fontsource-variable/inter";
 
 const theme = extendTheme(
   {
     fonts: {
-      heading: "'Archivo Variable', sans-serif",
-      body: "'Archivo Variable', sans-serif",
+      heading: "'Inter Variable', sans-serif",
+      body: "Charter, serif",
     },
   },
   withProse({
     baseStyle: {
-      "h1": {
+      h1: {
         mt: 4,
         mb: 4,
-        fontSize: "3xl", // Reduced from original size
+        fontSize: "4xl", // Reduced from original size
       },
-      "h2": {
+      h2: {
         mt: 4,
         mb: 4,
         fontSize: "2xl", // Reduced from original size
@@ -35,14 +35,25 @@ const theme = extendTheme(
         fontSize: "xl", // Reduced from original size
       },
       p: {
-        my: 3,
-        fontSize: "l", // Reduced from original size
+        my: 6,
+        fontSize: "xl", // Reduced from original size
+        fontWeight: "500", // Change to normal
+        lineHeight: "1.5em", // Adjust line height
+        wordSpacing: "0.01em", // Add word spacing
       },
       a: {
-        color: "blue.500",
+        color: "blue.400",
+        fontWeight: "900",
+      },
+      li: {
+        my: 6,
+        fontSize: "xl", // Reduced from original size
+        fontWeight: "400", // Change to normal
+        lineHeight: "32px", // Adjust line height
+        wordSpacing: "0.01em", // Add word spacing
       },
     },
-  })
+  }),
 );
 
 const getDefaultLayout = (page: ReactElement) => (
@@ -57,11 +68,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
   React.useEffect(() => {
     const handleRouteChange = () => {
-      console.log('Route change completed');
+      console.log("Route change completed");
       posthog.capture("$pageview");
     };
     router.events.on("routeChangeComplete", handleRouteChange);
-  
+
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };

@@ -1141,6 +1141,21 @@
   resolved "https://registry.npmjs.org/@fontsource-variable/archivo/-/archivo-5.0.18.tgz"
   integrity sha512-2RMljjwJcHz1JqYFI29syQXWktmby6sTCQ2GKPw0JEHEk9OUxx0L1L+syG2Kq46fjBrmI1Enq4I+Ne2EwSD7aA==
 
+"@fontsource-variable/bitter@^5.0.19":
+  version "5.0.19"
+  resolved "https://registry.npmjs.org/@fontsource-variable/bitter/-/bitter-5.0.19.tgz"
+  integrity sha512-DRxRmeJVO45nCYhroyg8MKIR082W4iUkvL6QLqY5NIp499mNJwBpe20fQ06DyDPodHfjKDZ56jaUk9pdmp/IXA==
+
+"@fontsource-variable/inter@^5.0.18":
+  version "5.0.18"
+  resolved "https://registry.npmjs.org/@fontsource-variable/inter/-/inter-5.0.18.tgz"
+  integrity sha512-rJzSrtJ3b7djiGFvRuTe6stDfbYJGhdQSfn2SI2WfXviee7Er0yKAHE5u7FU7OWVQQQ1x3+cxdmx9NdiAkcrcA==
+
+"@fontsource/dm-mono@^5.0.20":
+  version "5.0.20"
+  resolved "https://registry.npmjs.org/@fontsource/dm-mono/-/dm-mono-5.0.20.tgz"
+  integrity sha512-Oh4dJc4dv23WhquFrbo7HsDXDpsEHLtUNPXYlof8IpW1Wgi4DK4+ti6xtZsVm/vkat2yvxfLMAGBpzJ7el2ajQ==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.8.tgz"
@@ -1971,6 +1986,11 @@ character-reference-invalid@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/character-reference-invalid/-/character-reference-invalid-2.0.1.tgz"
   integrity sha512-iBZ4F4wRbyORVsu0jPV7gXkOsGYjGHPmAyv+HiHG8gi5PtC9KI2j1+v8/tlibRvjoWX027ypmG/n0HtO5t7unw==
+
+charter-webfont@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.npmjs.org/charter-webfont/-/charter-webfont-4.1.0.tgz"
+  integrity sha512-nYu9iCmmhHTHm3UxQagborgPJZ6VjlFD6BKP6AqkqRrVC5YbRkFv8up2Ccg3exsaRA0jbIt18+ge4BkYMRugzA==
 
 chrome-trace-event@^1.0.2:
   version "1.0.3"

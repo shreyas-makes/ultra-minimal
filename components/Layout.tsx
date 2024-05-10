@@ -35,6 +35,7 @@ function Navigation({
     <Link href={link} target={isExternal ? "_blank" : "_self"}>
       <Text
         fontSize="sm"
+        fontFamily="Inter, sans-serif" // Use Inter font family
         color={isActive ? "black" : "gray.500"}
         _hover={{ color: "black" }}
       >
@@ -60,7 +61,11 @@ function Layout({ children }: PropsWithChildren) {
       >
         <VStack position="fixed" align="flex-start" spacing={10}>
           <VStack align="flex-start">
-            <Text fontWeight="bold" fontSize="smaller">
+            <Text
+              fontSize="sm"
+              fontWeight="bold"
+              fontFamily="Inter, sans-serif" // Use Inter font family
+            >
               NAVIGATION
             </Text>
             <Navigation link="/">Home</Navigation>
@@ -69,7 +74,11 @@ function Layout({ children }: PropsWithChildren) {
             <Navigation link="/books">Books</Navigation>
           </VStack>
           <VStack align="flex-start">
-            <Text fontWeight="bold" fontSize="smaller">
+            <Text
+              fontSize="sm"
+              fontWeight="bold"
+              fontFamily="Inter, sans-serif" // Use Inter font family
+            >
               FIND ME ON
             </Text>
             <Navigation link="https://blog.shreyasprakash.com" isExternal>
@@ -79,7 +88,7 @@ function Layout({ children }: PropsWithChildren) {
               Twitter
             </Navigation>
             <Navigation link="https://github.com/shreyas-makes" isExternal>
-              GitHub
+              Github
             </Navigation>
             <Navigation
               link="https://www.linkedin.com/in/shreyasprakash/"
