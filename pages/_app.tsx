@@ -22,21 +22,21 @@ const theme = extendTheme(
       h1: {
         mt: 4,
         mb: 4,
-        fontSize: "4xl", // Reduced from original size
+        fontSize: ["3xl", "4xl"], // Reduced from original size
       },
       h2: {
         mt: 4,
         mb: 4,
-        fontSize: "2xl", // Reduced from original size
+        fontSize: ["xl", "2xl"], // Reduced from original size
       },
       "h3, h4, h5, h6": {
         mt: 4,
         mb: 4,
-        fontSize: "xl", // Reduced from original size
+        fontSize: ["lg", "xl"], // Reduced from original size
       },
       p: {
         my: 6,
-        fontSize: "xl", // Reduced from original size
+        fontSize: ["md", "lg"], // Reduced from original size
         fontWeight: "500", // Change to normal
         lineHeight: "1.5em", // Adjust line height
         wordSpacing: "0.01em", // Add word spacing
@@ -47,7 +47,7 @@ const theme = extendTheme(
       },
       li: {
         my: 6,
-        fontSize: "xl", // Reduced from original size
+        fontSize: ["md", "lg"], // Reduced from original size
         fontWeight: "400", // Change to normal
         lineHeight: "32px", // Adjust line height
         wordSpacing: "0.01em", // Add word spacing
