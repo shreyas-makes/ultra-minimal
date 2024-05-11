@@ -9,6 +9,22 @@ import React from "react";
 import { useRouter } from "next/router";
 import "charter-webfont/charter.css";
 import "@fontsource-variable/inter";
+import { Box } from "@chakra-ui/react";
+
+function Callout({ children }) {
+  return (
+    <Box
+      p={4}
+      bg="blue.50"
+      borderWidth="1px"
+      borderColor="blue.400"
+      borderRadius="md"
+      mb={4}
+    >
+      {children}
+    </Box>
+  );
+}
 
 const theme = extendTheme(
   {
