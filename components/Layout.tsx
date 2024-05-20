@@ -35,7 +35,7 @@ function Navigation({
     <Link href={link} target={isExternal ? "_blank" : "_self"}>
       <Text
         fontSize="sm"
-        fontFamily="Inter, sans-serif" // Use Inter font family
+        fontFamily="Verdana, sans-serif" // Use Inter font family
         color={isActive ? "black" : "gray.500"}
         _hover={{ color: "black" }}
       >
@@ -65,7 +65,7 @@ function Layout({ children }: PropsWithChildren) {
             <Text
               fontSize="sm"
               fontWeight="bold"
-              fontFamily="Inter, sans-serif" // Use Inter font family
+              fontFamily="Verdana, sans-serif" // Use Inter font family
             >
               NAVIGATION
             </Text>
@@ -78,7 +78,7 @@ function Layout({ children }: PropsWithChildren) {
             <Text
               fontSize="sm"
               fontWeight="bold"
-              fontFamily="Inter, sans-serif" // Use Inter font family
+              fontFamily="Verdana, sans-serif" // Use Inter font family
             >
               FIND ME ON
             </Text>
