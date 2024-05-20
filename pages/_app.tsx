@@ -2,14 +2,14 @@ import type { AppProps } from "next/app";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Prose, withProse } from "@nikolovlazar/chakra-ui-prose";
 import Layout from "../components/Layout";
-import { ReactElement } from "react";
+import { ReactElement, ReactNode } from "react";
 import { DefaultSeo } from "next-seo";
 import posthog from "posthog-js";
 import React from "react";
 import { useRouter } from "next/router";
 import { Box } from "@chakra-ui/react";
 
-function Callout({ children }: { children: React.ReactNode }) {
+function Callout({ children }: { children: ReactNode }) {
   return (
     <Box
       p={4}
@@ -76,7 +76,10 @@ const getDefaultLayout = (page: ReactElement) => (
   </Layout>
 );
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({
+  Component,
+  pageProps,
+}: AppProps & { Component: React.ComponentType }) {
   const router = useRouter();
   const getLayout = Component.getLayout || getDefaultLayout;
 
