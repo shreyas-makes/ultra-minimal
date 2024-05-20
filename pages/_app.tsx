@@ -36,24 +36,24 @@ const theme = extendTheme(
       h1: {
         mt: 4,
         mb: 4,
-        fontSize: "4xl", // Reduced from original size
+        fontSize: "4xl",
       },
       h2: {
         mt: 4,
         mb: 4,
-        fontSize: "2xl", // Reduced from original size
+        fontSize: "2xl",
       },
       "h3, h4, h5, h6": {
         mt: 4,
         mb: 4,
-        fontSize: "xl", // Reduced from original size
+        fontSize: "xl",
       },
       p: {
         my: 6,
-        fontSize: "xl", // Reduced from original size
-        fontWeight: "500", // Change to normal
-        lineHeight: "1.5em", // Adjust line height
-        wordSpacing: "0.01em", // Add word spacing
+        fontSize: "xl",
+        fontWeight: "500",
+        lineHeight: "1.5em",
+        wordSpacing: "0.01em",
       },
       a: {
         color: "blue.400",
@@ -61,10 +61,10 @@ const theme = extendTheme(
       },
       li: {
         my: 6,
-        fontSize: "xl", // Reduced from original size
-        fontWeight: "400", // Change to normal
-        lineHeight: "32px", // Adjust line height
-        wordSpacing: "0.01em", // Add word spacing
+        fontSize: "xl",
+        fontWeight: "400",
+        lineHeight: "32px",
+        wordSpacing: "0.01em",
       },
     },
   }),
