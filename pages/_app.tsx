@@ -7,11 +7,9 @@ import { DefaultSeo } from "next-seo";
 import posthog from "posthog-js";
 import React from "react";
 import { useRouter } from "next/router";
-import "charter-webfont/charter.css";
-import "@fontsource-variable/inter";
 import { Box } from "@chakra-ui/react";
 
-function Callout({ children }) {
+function Callout({ children }: { children: React.ReactNode }) {
   return (
     <Box
       p={4}
@@ -29,8 +27,8 @@ function Callout({ children }) {
 const theme = extendTheme(
   {
     fonts: {
-      heading: "'Inter Variable', sans-serif",
-      body: "Charter, serif",
+      heading: "Verdana, sans-serif",
+      body: "Verdana, serif",
     },
   },
   withProse({
