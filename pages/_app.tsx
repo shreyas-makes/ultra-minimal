@@ -63,7 +63,7 @@ const theme = extendTheme(
         my: 6,
         fontSize: ["sm", "lg", "xl"],
         fontWeight: "500",
-        lineHeight: "1.5em",
+        lineHeight: "1em",
         wordSpacing: "0.01em",
       },
     },
