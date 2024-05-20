@@ -36,12 +36,12 @@ const theme = extendTheme(
       h1: {
         mt: 4,
         mb: 4,
-        fontSize: ["2xl", "3xl", "4xl"],
+        fontSize: ["xl", "3xl", "4xl"],
       },
       h2: {
         mt: 4,
         mb: 4,
-        fontSize: ["xl", "2xl"],
+        fontSize: ["lg", "2xl"],
       },
       "h3, h4, h5, h6": {
         mt: 4,
@@ -50,7 +50,7 @@ const theme = extendTheme(
       },
       p: {
         my: 6,
-        fontSize: ["md", "lg", "xl"],
+        fontSize: ["sm", "lg", "xl"],
         fontWeight: "500",
         lineHeight: "1.5em",
         wordSpacing: "0.01em",
