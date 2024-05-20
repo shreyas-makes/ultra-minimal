@@ -61,9 +61,9 @@ const theme = extendTheme(
       },
       li: {
         my: 6,
-        fontSize: ["md", "lg", "xl"],
-        fontWeight: "400",
-        lineHeight: "32px",
+        fontSize: ["sm", "lg", "xl"],
+        fontWeight: "500",
+        lineHeight: "1.5em",
         wordSpacing: "0.01em",
       },
     },
