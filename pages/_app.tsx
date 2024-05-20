@@ -60,10 +60,10 @@ const theme = extendTheme(
         fontWeight: "900",
       },
       li: {
-        my: 6,
+        my: 4,
         fontSize: ["sm", "lg", "xl"],
         fontWeight: "500",
-        lineHeight: "1em",
+        lineHeight: "1.5em",
         wordSpacing: "0.01em",
       },
     },
