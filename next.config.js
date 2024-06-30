@@ -12,14 +12,6 @@ const withMDX = require("@next/mdx")({
     // providerImportSource: "@mdx-js/react",
   },
 });
-const nextConfig = {
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-  images: {
-    domains: ["www.shreyasprakash.com"],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },
-};
 
 module.exports = withMDX({
   // Append the default value with md extensions
