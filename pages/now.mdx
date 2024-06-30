@@ -3,6 +3,44 @@ import Layout from '../components/Layout';
 import WorksContent from './works.mdx';
 import { Image } from "@chakra-ui/react";
 
+# Sun, 30 Jun, 2024
+
+I made my first software-related open source contribution! I specifically mention 'software-related', as I'd contributed to the open-source hardware movement during the 2020 pandemic. Making my npm package publicly accessible for anyone to use did hit me differently.
+
+To give you a bit of a context to the problem, I was recently debugging my Rails codebase by talking through the challenges with GPT. It was however facing the 'blind man touching the elephant' problem. It was not accurate in its debugging as it was not able to see through the entire directory I was working with. I had to share individual files separately for it to better understand.
+
+This was a huge point of annoyance, and I was looking at smart approaches to share file tree structure, and that's when I discovered `tree` command which helped me create simple unicode formatting of my file structure as follows:
+
+```
+.
+├── README.md
+├── components
+│   ├── Bookshelf.tsx
+│   └── Layout.tsx
+├── content
+│   ├── books
+│   ├── engineering
+│   └── writing
+```
+
+However, I wanted a bit more granularity in terms of what I wanted to communicate. So I forked this package, and created a version of my own which also communicates the # of visible, hidden files under each level as well as the overall file size under each folder as shown below:
+
+```
+. (17 visible files, 0 hidden files, 16 visible directories, 0 hidden directories, 8.34 MB overall size)
+├── Dockerfile
+├── Gemfile (3 hidden files, 7 visible files, 1.00 KB overall size)
+├── Gemfile.lock
+├── README.md
+├── Rakefile (4 hidden files, 2 visible files, 8 MB overall size)
+├── app (8 hidden files, 2 visible files, 8 MB overall size)
+│   ├── controllers (8 hidden files, 2 visible files, 8 MB overall size)
+│   ├── models (8 hidden files, 2 visible files, 8 MB overall size)
+│   ├── views (8 hidden files, 2 visible files, 8 MB overall size)
+│   └── ... (additional subdirectories)
+```
+
+You could install this [npm package here](https://www.npmjs.com/package/dftree?activeTab=readme), let me know your thoughts :)
+
 # Mon, 24 Jun, 2024
 
 ## SvelteJS + Ruby on Rails
